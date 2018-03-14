@@ -25,3 +25,7 @@ body {
 .icon-block {
   font-size:5em;
 }
+
+.hero-head {
+  background-color: rgba(0, 0, 0, 0.75);
+}
