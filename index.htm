@@ -16,7 +16,7 @@
         <div class="container">
           <div class="nav-left">
             <a class="nav-item" href="index.htm">
-              KAMoulox Project
+              The KAMoulox Project
             </a>
           </div>
           <span class="nav-toggle">
@@ -35,8 +35,8 @@
               Partners
             </a>
             <span class="nav-item">
-              <a href="http://archives.crem-cnrs.fr/" class="button is-info">
-                <span>CREM Archive</span>
+              <a href="http://kamoulox.telemeta.org/" class="button is-info">
+                <span>Archives of the CNRS - Musée de l'Homme</span>
               </a>
             </span>
           </div>
@@ -56,63 +56,60 @@
   </section>
   <div class="section main">
     <div class="content">
-      <h2 id="starting-point-archives-of-the-cnrs---musée-de-lhomme">Starting point: archives of the CNRS - Musée de l’Homme</h2>
+      <h1>Executive summary</h1>
+      <img src="images/anr.png" alt="Funded by ANR" style="height:10em; float:left; padding:1em">
+      The KAMoulox project (<a href="http://www.agence-nationale-recherche.fr/Projet-ANR-15-CE38-0003">ANR-15-CE38-0003</a>) runs from January 2016 to September 2019. It has been funded by <a href="http://www.agence-nationale-recherche.fr/">ANR, the French national research agency</a>, as a Junior Researcher project with principal investigator <a href="https://scholar.google.fr/citations?user=0s7V4FAAAAAJ">Antoine Liutkus</a>.
+      Its name stands for <font color="red">K</font>ernel <font color="red">a</font>dditive <font color="red">m</font>odels for <font color="red">o</font>nline <font color="red">u</font>nmixing of <font color="red">l</font>arge hist<font color="red">o</font>rical ar<font color="red">x</font>ives.
+      KAMoulox has two main objectives:
       <ul>
-      <li>French ethnologists to record world audio heritage</li>
-      <li>Since 1900: 42k documents, 32k digitized</li>
-      <li>From 199 countries, 1200 ethnies <img src="figures/crem-map.png" alt="" style="background-color ;" width="100%"></li>
+        <li> Developing cutting-edge audio restoration techniques through signal processing research.</li>
+        <li> Making them available for research in <a href="http://kamoulox.telemeta.org">real world sound archives</a>, in an open-source environment.</li>
       </ul>
-      <h2 id="valorization-potential">Valorization potential</h2>
+
+       The main assumption of the project is that audio separation and restoration can help shape new practices regarding our immaterial audio heritage. It can notably benefit to the scientific and educational exploitation of this heritage through the concept of crowd processing.
+
+      <h1>Assets</h1>
+      <h2>The archives of the CNRS - Musée de l’Homme</h2>
+      <h3>Description</h3>
+      <img src="images/crem-map.png" alt="Countries with items in the archives" style="height:30em; padding:1em">
       <ul>
-      <li>High scientific value: 2600 scientists/month</li>
-      <li>Repurposing possibilities: musical creation, licensing, etc.</li>
+      <li>Since late 19th century, French ethnologists were sent over the world with the mission to record the world audio heritage</li>
+      <li>To this day, this <a href="http://archives.crem-cnrs.fr/">extraordinary database</a> comprises 42k documents, among which 32k are digitized</li>
+      <li>The diversity of this archive is tentalizing, with items from 199 countries and 1200 ethnies</li>
       </ul>
-      <h2 id="challenges">Challenges</h2>
-      <iframe width="350" height="150" style="float:right" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://archives.crem-cnrs.fr/archives/items/CNRSMH_I_1900_001_002/player/350x50">
-      </iframe>
+      <h3>Value</h2>
       <ul>
-      <li>Most recordings are <strong>old, degraded, noisy</strong></li>
-      <li>Users are <strong>not</strong> sound engineers</li>
-      <li>Impossible to automatically restore <strong>all</strong> entries</li>
+      <li>The archives of the CNRS - Musée de l'Homme are one working material for a whole community of scientists in digital humanities.</li>
+      <li>As of December 2017, there are 2600 scientists/month regularly using the archive.</li>
+      <li>With a content of an extraordinary cultural value, the archives offer rich repurposing possibilities: musical creation, licensing, etc.</li>
       </ul>
-      <h2 id="key-final-objectives">Key final objectives</h2>
+
+      The mixed research unit <a href="http://crem-cnrs.fr/">CREM: Centre de Recherche en Ethno-Musicologie</a> is responsible for these archives.<p>
+      <img src="images/crem.png" alt="Countries with items in the archives" style="height:3em">
+      <h3>Challenges</h3>
+      Although they are an invaluable source for information and wealth for our immaterial cultural heritage, the archives also come with some specific challenges, which are the focus of the project.
+      <ul>
+      <li>Most recordings are <strong>old, degraded and noisy</strong>, often preventing repurposing in cultural creation.</li>
+      <li>Users are <strong>not</strong> sound engineers and may not easily proceed to restoration themselves.</li>
+      <li>Due to the sheer volume of these archives and the time required, it is impossible to automatically restore <strong>all</strong> entries. The need to proceed on demand emerges.</li>
+      </ul>
+      <h3>Objectives for the project</h3>
       <ul>
       <li>Audio restoration for the non expert</li>
       <li>Embed online audio restoration tools <em>in the archives</em></li>
-      <li>Create <strong>useful</strong> tools for digital humanities</li>
       </ul>
-      <h2 id="identified-risks">Identified risks</h2>
+
+      <h2>Audio signal separation</h2>
+      <h3>Description</h3>
+
       <ul>
-      <li>Scientists users have their own research objectives</li>
-      <li>CREM is heavily solicited by signal processing researchers</li>
-      <li>For them: no useful feedback so far</li>
+      <li>Antoine Liutkus and collaborators are specialists in <strong>audio source separation</strong>, which consists in recovering the differnet sounds in a recording. Denoising and demixing are examples.</li>
+      <li>This topic is heavily based on probabilistic models for time series, that comprise two core elements:</li>
+      <ul>
+        <li>The distribution considered and the corresponding filtering procedure. Our recent research focuses on α-stable models, that appear especially interesting for denoising.</li>
+        <li>Models for the spectrograms, that describe how a sound is varying over time and frequency. This is the topic of our recent research on <strong>kernel and DNN</strong> models.</li>
       </ul>
-      <div class="solutions">
-      <pre><code>&lt;ul&gt;
-          &lt;li&gt;Focus on a few usecases defined __with the users__&lt;/li&gt;
-          &lt;li&gt;Exploit users&#39; data for training systems&lt;/li&gt;
-      &lt;/ul&gt;</code></pre>
-      </div>
-      <h2 id="usecases-defined-with-the-users">Usecases defined <em>with the users</em></h2>
-      <p><img src="figures/photos/clara.jpg" alt="" style="background-color ; float:right" height="200em"> * Prestation by <strong>Clara Biermann</strong> - Ethnomusicolgist, CREM archives specialist - July to september 2016: 10k€ on KAMoulox - Organize collaboration with CREM reserchers * <strong>Report</strong> on the use-cases desired by users - Denoising: wind and support noise removal - Separation: percussion, lead/choir separation * <strong>Datasets</strong> train/test for each, at least 1h30 per category</p>
-      <h2 id="future-milestones">Future milestones</h2>
-      <ul>
-      <li>Training systems with user data</li>
-      <li>User-centered design
-      <ul>
-      <li>One online tool per usecase</li>
-      <li>Involve users in the design: release early &amp; often</li>
-      </ul></li>
-      <li>Meet the target scientific audience: dedicated conferences
-      <ul>
-      <li>Scientific collaborations on digital humanities grounds</li>
-      </ul></li>
       </ul>
-      <h2 id="starting-point-audio-processing-expertise">Starting point: audio processing expertise</h2>
-      <ul>
-      <li>Audio source separation theory and implementations</li>
-      <li>Probabilistic modeling for time series</li>
-      <li>Recent breakthroughs: KAM and fast separation
       <div class="references">
       <ul>
       <li>
@@ -124,206 +121,46 @@
       <li>
       A. Liutkus et al. “Generalized Wiener filtering with fractional power spectrograms.” IEEE ICASSP, 2015
       </li>
+      <li>
+      A. Nugraha et al. "Multichannel audio source separation with deep neural networks." IEEE TASLP, 2016.
+      </li>
       </ul>
       </div></li>
-      </ul>
-      <h2 id="valorization-potential-1">Valorization potential</h2>
+
+      <img src="images/DNNsep.png" alt="DNN for source separation" style="height:30em; padding:1em">
+
+      <h3>Challenges</h3>
+      Our current research on probabilistic models for audio processing comprise several important challenges, that need to be addressed befor the methods may be used in real applications.
       <ul>
-      <li>Promising leading research on non Gaussian models</li>
-      <li>Bringing cutting edge audio effects to users</li>
+      <li>Tractability is an issue: applications require fast computations, and models need to be pre-trained. Scaling up training to the archives level remains a challenge, especially considering that archives only feature real data, so that the true underlying noise or sources are unknown.</li>
+      <li>Alpha-stable modeling are effective and explain many heuristics used in the field. However, learning their parameters and generalizing them to multichannel cases is a real challenge, due to the lack of an analytical expression for their likelihood function.</li>
       </ul>
-      <h2 id="challenges-1">Challenges</h2>
-      <ul>
-      <li>Non-tractable <span class="math inline"><em>α</em></span>-stable likelihoods, difficult inference</li>
-      <li>Learning sources models as kernels</li>
-      <li>Human-in-the-loop at the model level</li>
-      </ul>
-      <h2 id="key-final-objectives-1">Key final objectives</h2>
+      <h3>Objectives for the project</h3>
       <ul>
       <li>Robustness: filtering in noise, robust inference</li>
       <li>Explaining heuristics with the <span class="math inline"><em>α</em></span>-stable paradigm</li>
       <li>Flexible and exemplar-based trainable audio models</li>
       </ul>
-      <h2 id="beyond-the-gaussian-process-risks">Beyond the Gaussian process: risks</h2>
-      <ol type="1">
-      <li>Practical advantage of the <span class="math inline"><em>α</em></span>-stable model</li>
-      </ol>
-      <ul>
-      <li>The need for convincing applications</li>
-      <li>Going away from maximum likelihood</li>
-      </ul>
-      <ol start="2" type="1">
-      <li>Computational load compatible with objectives of project</li>
-      </ol>
-      <ul>
-      <li>MCMC is too slow yet for online processing</li>
-      <li>Delicate <span class="math inline"><em>α</em></span>-stable multichannel generalization
-      <div class="solutions">
-      <ul>
-      <li>
-      Good models for noise signals and enhancement
-      </li>
-      <li>
-      Scalable learning through sketching
-      </li>
-      <li>
-      Hybrid <span class="math inline"><em>α</em></span>-stable/Gaussian models
-      </li>
-      </ul></li>
-      </ul>
-      </div>
-      <h2 id="beyond-the-gaussian-process-achievements">Beyond the Gaussian process: achievements</h2>
-      <ul>
-      <li>Ph.D by Mathieu Fontaine (05/2016)
-      <ul>
-      <li>Co-funding from Région Lorraine</li>
-      <li><strong>Publications</strong> 4 conferences, 1 journal in preparation</li>
-      </ul></li>
-      <li>Effective denoising algorithms
-      <div class="references">
-      <ul>
-      <li>
-      U. Simsekli et al. “Alpha-stable low-rank plus residual decomposition for speech enhancement.” ICASSP, 2018.
-      </li>
-      <li>
-      M. Fontaine et al. “Explaining the parameterized wiener filter with alpha-stable processes.”IEEE WASPAA, 2017.
-      </li>
-      </ul></li>
-      </ul>
-      </div>
-      <ul>
-      <li>Moment-matching inference
-      <div class="references">
-      <ul>
-      <li>
-      M. Fontaine et al. “Scalable source localization with multichannel α-stable distributions.” EUSIPCO, 2017.
-      </li>
-      </ul></li>
-      </ul>
-      </div>
-      <ul>
-      <li>New hybrid probabilistic audio models
-      <div class="references">
-      <ul>
-      <li>
-      P. Magron et al. “Separation of nonnegative alpha-stable sources.” IEEE SPL, 2016.
-      </li>
-      <li>
-      A. Liutkus et al. “Audio source separation with magnitude priors: the BEADS model.” IEEE ICASSP, 2018.
-      </li>
-      </ul>
-      </div></li>
-      </ul>
-      <h2 id="nonparametric-models-for-audio-risks">Nonparametric models for audio: risks</h2>
-      <ol type="1">
-      <li>Kernel models outperformed by deep neural networks - Rapid breakthroughs demonstrate the superiority of DNN - Continue state-of-the-art research</li>
-      <li>Scale up to archives volumes - Data-wise - User-wise</li>
-      </ol>
-      <div class="solutions">
-      <pre><code>&lt;ul&gt;
-        &lt;li&gt;Extensive benchmark of separation systems&lt;/li&gt;
-        &lt;li&gt;DNN methods for data-driven&lt;/li&gt;
-        &lt;li&gt;Kernel methods for user-driven&lt;/li&gt;
-      &lt;/ul&gt;</code></pre>
-      </div>
-      <p>## Nonparametric models for audio: achievements * Postdoc by Fabian-Robert Stöter (12/2017) - Benchmarking - SiSEC campaign (2 LVA/ICA) - TASLP overview (AQ) - DNN-based separation</p>
-      <div class="references" style="margin-bottom: 1em">
-      <pre><code>&lt;ul&gt;
-        &lt;li&gt;A. Liutkus et al. &quot;The 2016 signal separation evaluation campaign.&quot; LVA-ICA, 2017.&lt;/li&gt;
-        &lt;li&gt;A. Nugraha et al. &quot;Multichannel music separation with deep neural networks.&quot; EUSIPCO, 2016&lt;/li&gt;
-        &lt;li&gt;F. Stöter et al. &quot;Common fate model for unison source separation.&quot; IEEE ICASSP, 2016.&lt;/li&gt;
-      &lt;/ul&gt;</code></pre>
-      </div>
-      <ul>
-      <li><strong>Kernel models</strong> user-input, multichannel variants</li>
-      </ul>
-      <div class="references">
-      <ul>
-      <li>
-      D. Fitzgerald et al. “Projection-based demixing of spatial audio.” IEEE/ACM TASLP, 24.9 (2016): 1556-1568.
-      </li>
-      <li>
-      D. Fitzgerald et al. “User assisted separation of repeating patterns in time and frequency using magnitude projections.” IEEE ICASSP, 2017.
-      </li>
-      </ul>
-      </div>
-      <h2 id="overall-scientific-impact">Overall scientific impact</h2>
-      <ul>
-      <li>2 journals, 15 conferences</li>
-      <li>150 citations of KAMoulox funded papers</li>
-      <li>Invited talks: Kyoto Univ., Chicago Northwestern, Audiolabs Erlangen</li>
-      </ul>
-      <p><img src="figures/logos.jpg" alt="" style="background-color ; float:center" height="200em"></p>
-      <h2 id="future-milestones-1">Future milestones</h2>
-      <ul>
-      <li>DNN-based audio separation
-      <ul>
-      <li>General-purpose open-source baseline</li>
-      <li>Application to KAMoulox data</li>
-      </ul></li>
-      <li>From denoising to enhancement
-      <ul>
-      <li>DNN-based bandwidth extension, enhancement</li>
-      </ul></li>
-      <li><span class="math inline"><em>α</em></span>-stable formalism
-      <ul>
-      <li>Journal paper by M. Fontaine</li>
-      <li>Large-scale learning through sketching</li>
-      </ul></li>
-      </ul>
-      <h2 id="starting-point-telemeta">Starting point: Telemeta</h2>
-      <ul>
-      <li>Open-source Framework developped by Parisson since 2011</li>
-      <li>Used by CREM for the <em>archives du CNRS - Musée de l’Homme</em></li>
-      <li>Timeside: signal processing sub-system for Telemeta</li>
-      </ul>
-      <p><img src="figures/logos/telemeta.png" alt="" style="background-color ; float:center" height="70em"> <img src="figures/logos/crem.png" alt="" style="background-color ; float:center" height="70em"> <img src="figures/logos/parisson.png" alt="" style="background-color ; float:center" height="70em"></p>
-      <div class="references">
-      <ul>
-      <li>
-      T. Fillon. “Telemeta: An open-source web framework for ethnomusicological audio archives management and automatic analysis”. Intnl. Workshop on Digital Libraries for Musicology.
-      </li>
-      </ul>
-      </div>
-      <h2 id="challenges-2">Challenges</h2>
-      <ul>
-      <li>Extending Telemeta+Timeside for processing (not only information retrieval)</li>
-      <li>Enabling user interaction</li>
-      <li>Engineering challenge</li>
-      </ul>
-      <h2 id="key-final-objectives-2">Key final objectives</h2>
-      <ul>
-      <li>Embed KAMoulox algorithms in the real archives (Telemeta is mandatory)</li>
-      <li>Bring recent audio restoration tools to digital humanities scientist</li>
-      </ul>
-      <h2 id="future-milestones-2">Future milestones</h2>
-      <ul>
-      <li>Client-side DNN processing (javascript)</li>
-      <li>One online tool per usecase: denoising, separation</li>
-      <li>Scientific outreach
-      <ul>
-      <li>Targetting digital humanities community</li>
-      <li>Broad audience: youtube+interstices
-      <p></li>
-      </ul></li>
-      </ul>
-      <h1 id="final">Final</h1>
-      <p><em>Cutting-edge signal processing research for the audio heritage</em></p>
-      <ol type="1">
-      <li><strong>Restoration of immaterial audio heritage</strong> denoising, declipping, enhancement</li>
-      <li><strong>Online tools</strong> for scientists in digital humanities</li>
-      </ol>
-      <h3 id="challenges-3">Challenges</h3>
-      <ul>
-      <li><strong>Scale and noise</strong>: <span class="math inline">30000</span> precious but old, noisy and bandpass-limited items</li>
-      <li><strong>Users</strong>: are scientists, but <strong>non experts</strong></li>
-      </ul>
-      <h3 id="investigations">Investigations</h3>
-      <ul>
-      <li><strong>Probabilistic models</strong>: <span class="math inline"><em>α</em></span>-stable distributions, multichannel filtering, robust regression, parameters estimation</li>
-      <li><strong>Machine learning</strong>: deep neural networks, scalability, online processing</li>
-      <li><strong>Community service</strong>: open data &amp; software, open-access online tools</li>
-      </ul>
+
+
+      <h2>Work packages</h2>
+      <img src="images/iterative_WP.svg" alt="Workpackages for KAMoulox" style="height:30em; padding:1em">
+      <p>
+
+      KAMoulox is decomposed into 4 work-packages (WPs) of equal importance, that closely reflect its numerous scientific and technical objectives. From a transversal application perspective, all WPs revolve around incrementally improving a web-based source separation software architecture.
+
+      <h2> WP1 Robust separation methods</h2>
+      This WP builds on recent advances I proposed in probabilistic signal processing, that are based on the alpha-stable formalism and which notably extend the classical Gaussian methodology to heavy-tailed signals. This part of the project feature two main challenges. The first one is the estimation of parameters in models that do not come with likelihood functions. Ideas include moment fitting and Monte Carlo methods. Second, the case of multichannel signals brings interesting research directions for probabilistic signal processing.
+
+<h2> WP2 Extensions of KAM</h2>
+  This WP introduces new nonparametric ways of estimating the parameters of sources, notably their time-frequency energy profiles. This also comes with new ways to format the feedback displayed to the user for interacting with him. This work-package is divided into two main parts: first, the design of new non-parametric spectrogram models, such as deep-nets or nonnegative alpha-stable. Second, the iterative processing achieved through an interaction between the filtering machine and a user.
+
+
+<h2> WP3 Separation web-service </h2>
+This WP provides computationally efficient implementations to separation and parameter estimation procedures. It will also be critical in embedding the whole architecture on the existing platform of the CNRS - Musée de l'Homme.
+
+<h2> WP4 Design and science outreach</h2>
+This WP will first focus on the design of the client-side application using a resolutely user-centered methodology. It will then lead to the actual realization of this multimedia client, but also to the promotion of this technology through the realization of multimedia content and through the participation of strategical social events.
     </div>
   </div>
   <footer class="footer">
